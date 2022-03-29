@@ -1,5 +1,5 @@
 class Company < ActiveRecord::Base
-  has_many :freebies
+  # has_many :freebies
   has_many :devs, through: :freebies
 
   def give_freebie(dev, item_name, value)
@@ -7,7 +7,7 @@ class Company < ActiveRecord::Base
   end
 
   def self.oldest_company
-    Company.all.order(:founding_year).first
+    Company.all.order(:founding_year).fi
   end
 
 end
